@@ -3,6 +3,7 @@
 
 <head>
     <script src="../Scripts/main.js"></script>
+    <script src="../Scripts/overnight.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Overnight</title>
@@ -16,10 +17,72 @@
         document.write(header); // Variable is from main.js
     </script>
     <main>
+        <div class="container mt-5">
         <h1>Overnight</h1>
+        <form action="costForm" class="p-4 border rounded shadow-sm" id="overnightForm">
+        <legend>Looking for a Hotel Room?</legend>
+        <div class="mb-3">
+        <label>
+            Name: <input type="text" class="" id="name" placeholder="John Doe" required> 
+        </label>
+        </div>
+
+        <div class="mb-3">
+        <label>
+            Email: <input type="email" id="email" placeholder="johndoe@mail.com" required> 
+        </label>
+        </div>
+
+        <div class="mb-3">
+        <label>
+            Check-in Date: <input type="date" id="whenIn" required> 
+        </label>
+        </div>
+        
+        <div class="mb-3">
+        <label>
+            Number of Days: <input type="number" id="numOfDays" value="1" min="1" max="28" required> 
+        </label>
+        </div>
+
+        <div class="mb-3">
+        <label>
+            Number of Adults (18 and over): <input type="number" id="numOfAdult" name="when" value="1" min="0" max="4" required> 
+        </label>
+        </div>
+
+        <div class="mb-3">
+        <label>
+            Number of Kids (17 and under): <input type="number" id="numOfKids" name="when" value="0" min="0" max="4" required> 
+        </label>
+        </div>
+
+        <h3>Room Type</h3>
+        
+        <label><input type="radio" name="roomType" id="queenRoom" checked> Queen Room</label>
+        <label><input type="radio" name="roomType" id="kingRoom"> King Room</label> 
+        <label><input type="radio" name="roomType" id="twoBedRoom"> 2-Bedroom Suite</label>  
+        <br><br>
+
+        <h3>Discounts <h6>(Only one can be applied)</h6></h3>
+
+        <label><input type="radio" name="radio" id="noDiscount" checked> No Discount</label>
+        <label><input type="radio" name="radio" id="seniorDiscount"> AAA / Senior</label>
+        <label><input type="radio" name="radio" id="militaryDiscount"> Military</label>
+
+
+        <br><br>
+        <input type="submit" value="Save">
+        <br><br>
+        <div >
+<pre id="output">
+</pre>
+        </div>
+        </div>
     </main>
+    </form>
     <footer>
-        Copyright 2024
+        Copyright 2024 
     </footer>
 </body>
 </html>
